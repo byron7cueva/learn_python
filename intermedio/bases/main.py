@@ -38,3 +38,11 @@ def fetch_news_from_api(api_name: str, query: str):
 def process_article_data(raw_data):
     """Procesa datos crudos de articulo."""
     pass
+
+
+# Longitud de la linea: Maximo 88 caracteres (Black default)
+# Identacion: 4 espacions, nunca tabs
+# Nombres descriptivos: snake_case para funciones y variables
+# Imports ordenados: estandar -> terceros -> locales
+# Lineas en blanco: Separar funciones y clases logicamente
+# Comillas consistentes: Usar comillas dobles para strings
