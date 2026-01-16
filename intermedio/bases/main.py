@@ -46,3 +46,33 @@ def process_article_data(raw_data):
 # Imports ordenados: estandar -> terceros -> locales
 # Lineas en blanco: Separar funciones y clases logicamente
 # Comillas consistentes: Usar comillas dobles para strings
+
+
+# Argumentos dinamicos
+def newsapi_client(api_key, query, timeout=30, retries=3):
+    return f"NewsAPI: {query} con timeout {timeout}"
+
+
+def guardian_client(api_key, section, from_date, timeout=30, retries=3):
+    return f"Guardian {section} desde {from_date} con {timeout}"
+
+
+# Por lo general se utiliza como nombre al argumeto como args
+def ejemplo_args(*args):
+    print(f"TODOS {args}")
+    print(type(args))
+
+
+ejemplo_args("Este", "parametro", "aca")
+ejemplo_args("Hola", "Mundo")
+ejemplo_args()
+
+
+# El orden de los argumentos si importa, porque son posicionales
+def ejemplo_args2(api_key, *args):
+    print(f"api_key: {api_key}")
+    print(f"args: {args}")
+
+
+print("======")
+ejemplo_args2("Este", "parametro", "aca")

@@ -1,3 +1,4 @@
+# Comprehesions
 sample_articles = [
     {
         "title": "Python logra nuevo éxito",
@@ -91,14 +92,52 @@ print(extract_article_sumaries2(sample_articles))
 def unique_sources_traditional(articles):
     sources = set()
     for article in articles:
-        sources.add(article["source"]["name"])
+        if article.get("source") and article.get("source").get("name"):
+            sources.add(article["source"]["name"])
     return sources
 
 
+# {expression for member in iterable [if condition]}
 def unique_sources(articles):
-    return {article["source"]["name"] for article in articles}
+    return {
+        article["source"]["name"]
+        for article in articles
+        if article.get("source") and article.get("source").get("name")
+    }
 
 
 print("======")
 print(unique_sources_traditional(sample_articles))
 print(unique_sources(sample_articles))
+
+
+def categorize_traditional(articles):
+    sources = unique_sources(articles)
+    results = {}
+    for source in sources:
+        if source not in results:
+            results[source] = []
+
+        for article in articles:
+            if source == article.get("source").get("name"):
+                results[source].append(article)
+
+    return results
+
+
+def categorize(articles):
+    sources = unique_sources(articles)
+    return {
+        source: [
+            article
+            for article in articles
+            if source == article.get("source").get("name")
+        ]
+        for source in sources
+    }
+
+
+print("======")
+print(categorize_traditional(sample_articles))
+print("\n")
+print(categorize(sample_articles))
