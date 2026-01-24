@@ -32,3 +32,8 @@ Returns
 Exception
 Examples
 """
+
+# Tips
+# Se conciso y claro.
+# Manten actualizada la documentacion
+# Documenta ejemplos
