@@ -1,0 +1,14 @@
+2026-06-29 16:47:46,282 - INFO - Funcion iniciada con los datos: texto
+2026-06-29 16:47:46,283 - ERROR - Error los datos de entrada no heran numeros
+Traceback (most recent call last):
+  File "/home/bcueva/containers/distrobox/arch-python/learn-python/logs.py", line 9, in my_function
+    result = data / 2
+             ~~~~~^~~
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+2026-06-29 16:47:54,450 - INFO - Funcion iniciada con los datos: texto
+2026-06-29 16:47:54,450 - ERROR - Error los datos de entrada no heran numeros
+Traceback (most recent call last):
+  File "/home/bcueva/containers/distrobox/arch-python/learn-python/logs.py", line 9, in my_function
+    result = data / 2
+             ~~~~~^~~
+TypeError: unsupported operand type(s) for /: 'str' and 'int'

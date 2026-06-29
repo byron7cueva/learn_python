@@ -1,3 +1,14 @@
+role = "Desarrollador"
+enterprise = "BIG school"
+
+message = "Mi rol es " + role + " en " + enterprise
+print(message)
+
+# F-Strings
+message = f"Mi rol es {role} en {enterprise}"
+print(message)
+print(f"El doble de 5 es: {5 * 2}")
+
 print('"Hola mundo"')
 
 ingles = "I'm Byron"
